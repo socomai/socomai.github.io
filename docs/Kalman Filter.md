@@ -62,5 +62,7 @@ Ví dụ về phương sai và độ lệch chuẩn:
 - Khi trọng số X là 1 vector n phần tử thì MA TRẬN HIỆP PHƯƠNG SAI - COVERIANCE MATRIX của X sẽ phải là 1 ma trận Σ[n,n] mà trong đó Σi,j = cov(Xi, Xj) = E((Xi - μi)*(Xj - μj)) hay nói cách khác trong đó mỗi thành phần của Σ là hiệp phương sai của Xi, Xj tương ứng.
 - Ma trận hiệp phương sai là khái niệm quan trọng trong kinh tế học do đó không được bỏ qua.
 
+```
 X = | X1 |   -----------> Σ = | X11  X12 |     ----------> Σ = | cov(X1, X1)   cov(X1, X2) |      -------->  Σ = | E((X1-μ1)(X1-μ1))   E((X1-μ1)(X2-μ2)) |
     | X2 |                    | X21  X22 |                     | cov(X2, X1)   cov(X2, X2) |                     | E((X2-μ2)(X1-μ1))   E((X2-μ2)(X2-μ2)) |
+```
