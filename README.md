@@ -1,10 +1,11 @@
-# Socomai Technology
+# Socomai Technologies
 *A Quantitative Trading Firm*
 
 **What we do**
 
 - Statistical Arbitrage
 - Algorithmic Trading
+- Trend following
 
 **Using**
 
