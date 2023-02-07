@@ -36,6 +36,7 @@ Ví dụ về phương sai và độ lệch chuẩn:
 - Giả định các hệ thống là các hệ thống KHÔNG THIÊN VỊ (UNBIASED SYSTEM) tức là các phép đo có độ chính xác chấp nhận được.
 
 # Tổng kết nhỏ
+```
                                          ACCURACY (bias)
                       |<-------------------------------------------------------->|
                       |                                                          |
@@ -47,10 +48,11 @@ Ví dụ về phương sai và độ lệch chuẩn:
                       |                                        .    |            |           |     . 
                       |                                     .       |            |           |        .
                       |                                  .          |            |           |           .
-----------------------+---------------------------------------------+------------+-----------+--------------
+----------------------+---------------------------------------------+------------+-----------+-----------------------------------
                   TRỌNG SỐ                                         -σ            E           +σ
                   TRUE VALUE                                        |<---------------------->|
                                                                             PRECISION            
+```
 
 # Hiệp phương sai
 - Nếu như phương sai đo mức độ chính xác của 1 trọng số thì HIỆP PHƯƠNG SAI - COVARIANCE đo sự biến thiên cùng nhau của 02 trọng số. Nếu 2 trọng số có xu hướng thay đổi cùng nhau (cùng tăng, cùng giảm) thì hiệp phương sai của 2 biến có giá trị dương. Ngược lại thì hiệp phương sai có giá trị âm.
