@@ -1,7 +1,7 @@
 # Giá trị kỳ vọng, phương sai, độ lệch chuẩn
 Thực hiện 5 phép đo cân nặng khác nhau của 1 vật và cho ra 5 kết quả khác nhau thì:  
 
-- Cân nặng thực tế của vật là TRỌNG SỐ
+- Cân nặng thực tế của vật là ___TRỌNG SỐ___
 - Chúng ta không biết giá trị thực của trọng số vì nó là 1 BIẾN ẨN
 - Chúng ta có thể ước tính trọng số bằng cách lấy trung bình cộng của các kết quả đo được, kết quả thu được là GÍA TRỊ KỲ VỌNG của trọng số chính là GIÁ TRỊ TRUNG BÌNH bạn ước đoán được sau nhiều lần thử nghiệm.
 - Giá trị trung bình được ký hiệu bằng μ. Giá trị kỳ vọng ký hiệu bằng E.
@@ -11,15 +11,15 @@ Thực hiện 5 phép đo cân nặng khác nhau của 1 vật và cho ra 5 kế
 
 Ví dụ về phương sai và độ lệch chuẩn:
 
-1. Để tính mức độ sai khác của tập dữ liệu ta lấy từng giá trị trừ đi giá trị trung bình μ: xn - μ
-2. Kết quả sẽ có các giá trị âm, để loại bỏ các giá trị âm ta bình phương lên (xn - μ)^2
-3. Để tính toán phương sai ta lấy giá trị trung bình của tất cả các bình phương bên trên: 1/n * Z(xn - μ)^2
+1. Để tính mức độ sai khác của tập dữ liệu ta lấy từng giá trị trừ đi giá trị trung bình μ: `xn - μ`
+2. Kết quả sẽ có các giá trị âm, để loại bỏ các giá trị âm ta bình phương lên `(xn - μ)^2`
+3. Để tính toán phương sai ta lấy giá trị trung bình của tất cả các bình phương bên trên: `1/n * Z(xn - μ)^2`
 4. Để tính toán độ lệch chuẩn ta lấy căn bậc 2 của phương sai đã nói ở trên để quay lại đơn vị ban đầu
-5. Theo hiệu chỉnh Bessel, phương sai phải viết lại là: 1/(n-1) * Z(xn - μ)^2.
+5. Theo hiệu chỉnh Bessel, phương sai phải viết lại là: `1/(n-1) * Z(xn - μ)^2`.
 
 # Phân Phối (Phân Bố) Chuẩn, PDF
 - Tần suất của các giá trị xuất hiện xung quanh giá trị trung bình cao hơn tần suất xuất hiện của các giá trị ở xa trung bình.
-- 68.26% tổng giá trị nằm trong khoảng 01 độ lệch chuẩn so với giá trị trung bình (μ +- σ)
+- 68.26% tổng giá trị nằm trong khoảng 01 độ lệch chuẩn so với giá trị trung bình `(μ +- σ)`
     - Tức là nếu giá trị trung bình là 1.9m thì 68.26% số giá trị sẽ nằm trong khoảng từ 1.7m - 2.1m.
 - 95.44% tổng giá trị nằm trong khoảng 02 độ lệch chuẩn so với giá trị trung bình.
 - 99.74% tổng giá trị nằm trong khoảng 03 độ lệch chuẩn so với giá trị trung bình.
@@ -56,13 +56,30 @@ Ví dụ về phương sai và độ lệch chuẩn:
 
 # Hiệp phương sai
 - Nếu như phương sai đo mức độ chính xác của 1 trọng số thì HIỆP PHƯƠNG SAI - COVARIANCE đo sự biến thiên cùng nhau của 02 trọng số. Nếu 2 trọng số có xu hướng thay đổi cùng nhau (cùng tăng, cùng giảm) thì hiệp phương sai của 2 biến có giá trị dương. Ngược lại thì hiệp phương sai có giá trị âm.
-- Công thức tính hiệp phương sai có dạng: Cov(X, Y) = E((X-μ)*(Y-v)). Trong đó μ, v là giá trị kỳ vọng của X và Y.
+- Công thức tính hiệp phương sai có dạng: `cov(X, Y) = E((X-μ)*(Y-v))`. Trong đó μ, v là giá trị kỳ vọng của X và Y.
+- Nếu X và Y độc lập thì hiệp phương sai của X, Y bằng 0. Nhưng điều ngược lại không đúng.
 
 # Ma trận hiệp phương sai (Coveriance Matric)
-- Khi trọng số X là 1 vector n phần tử thì MA TRẬN HIỆP PHƯƠNG SAI - COVERIANCE MATRIX của X sẽ phải là 1 ma trận Σ[n,n] mà trong đó Σi,j = cov(Xi, Xj) = E((Xi - μi)*(Xj - μj)) hay nói cách khác trong đó mỗi thành phần của Σ là hiệp phương sai của Xi, Xj tương ứng.
+- Khi trọng số X là 1 vector n phần tử thì MA TRẬN HIỆP PHƯƠNG SAI - COVERIANCE MATRIX của X sẽ phải là 1 ma trận Σ[n,n] mà trong đó `Σi,j = cov(Xi, Xj) = E((Xi - μi)*(Xj - μj))` hay nói cách khác trong đó mỗi thành phần của Σ là hiệp phương sai của Xi, Xj tương ứng.
+- Ma trận hiệp phương sai sẽ có dạng đối xứng symetric.
 - Ma trận hiệp phương sai là khái niệm quan trọng trong kinh tế học do đó không được bỏ qua.
 
 ```
-X = | X1 |   -----------> Σ = | X11  X12 |     ----------> Σ = | cov(X1, X1)   cov(X1, X2) |      -------->  Σ = | E((X1-μ1)(X1-μ1))   E((X1-μ1)(X2-μ2)) |
-    | X2 |                    | X21  X22 |                     | cov(X2, X1)   cov(X2, X2) |                     | E((X2-μ2)(X1-μ1))   E((X2-μ2)(X2-μ2)) |
+X = | X1 |   ---> Σ = | Σ11  Σ12 |    ---> Σ = | cov(X1, X1)   cov(X1, X2) |    --->  Σ = | E((X1-μ1)(X1-μ1))   E((X1-μ1)(X2-μ2)) |
+    | X2 |            | Σ21  Σ22 |             | cov(X2, X1)   cov(X2, X2) |              | E((X2-μ2)(X1-μ1))   E((X2-μ2)(X2-μ2)) |
 ```
+
+Trong Kalman Filter, ma trận hiệp phương sai được ký hiệu là Pk và giả sử với vector trọng số là ma trận của vị trí và tốc độ.
+```
+X = | position |   ---> Σ = | Σpp  Σpv |
+    | velocity |            | Σvp  Σvv |
+```
+
+Với Kalman filter, ta cần dự đoán trọng số Xk dựa trên trọng số hiện tại Xk-1. Giả sử rằng vận tốc chuyển động không đổi thì:
+
+```
+pk = pk-1 + Δt*vk-1   --->  Xk = | 1  Δt | Xk-1   ---> Xk = Fk * Xk-1
+vk =           vk-1              | 0   1 |
+
+```
+
