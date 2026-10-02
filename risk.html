@@ -26,6 +26,49 @@
             font-size: 3.5rem;
           }
         }
+
+        /* Theme toggle button */
+        #theme-toggle {
+          cursor: pointer;
+          text-decoration: none;
+          font-size: 1.2rem;
+        }
+        #theme-toggle:hover {
+          text-decoration: none;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+          background-color: #121212 !important;
+          color: #e0e0e0 !important;
+        }
+        body.dark-mode .bg-white {
+          background-color: #1e1e1e !important;
+        }
+        body.dark-mode .card {
+          background-color: #1e1e1e !important;
+          border-color: #333 !important;
+        }
+        body.dark-mode .card-header {
+          background-color: #2c2c2c !important;
+          border-bottom: 1px solid #333 !important;
+        }
+        body.dark-mode .text-dark {
+          color: #e0e0e0 !important;
+        }
+        body.dark-mode .border-bottom,
+        body.dark-mode .border-top {
+          border-color: #333 !important;
+        }
+        body.dark-mode .shadow-sm {
+          box-shadow: 0 .125rem .25rem rgba(255,255,255,.075) !important;
+        }
+        body.dark-mode .text-muted {
+          color: #aaa !important;
+        }
+        body.dark-mode h5 {
+          color: #e0e0e0 !important;
+        }
       </style>
       <!-- Custom styles for this template -->
       <link href="/assets/pricing.css" rel="stylesheet">
@@ -40,7 +83,7 @@
     <h1 class="my-0 mr-md-auto font-weight-bold">Socomai</h1>
     <nav class="my-2 my-md-0 mr-md-3">
       <a class="p-2 text-dark" href="/">Home</a>
-      <a class="p-2 text-dark" href="#" id="theme-toggle" title="Toggle Light/Dark Theme">🌓</a>
+      <span id="theme-toggle" class="p-2" onclick="document.body.classList.toggle('dark-mode'); localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');" title="Toggle Light/Dark Theme">🌓</span>
       <!-- <a class="p-2 text-dark" href="#">What We Do</a>
       <a class="p-2 text-dark" href="#">How To Join</a> -->
     </nav>
@@ -93,13 +136,5 @@
       </div>
     </footer>
   </div>
-    <script>
-      document.getElementById('theme-toggle').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      });
-    </script>
   </body>
 </html>
